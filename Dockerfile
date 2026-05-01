@@ -16,5 +16,11 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Run the FastAPI application using shell to resolve $PORT
-CMD sh -c "uvicorn backend.app:app --host 0.0.0.0 --port $PORT"
+# Copy start script
+COPY start.sh .
+
+# Make it executable
+RUN chmod +x start.sh
+
+# Run the start script
+CMD ["./start.sh"]
