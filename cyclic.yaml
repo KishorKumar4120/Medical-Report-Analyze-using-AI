@@ -1,0 +1,23 @@
+# Cyclic configuration for full-stack deployment
+# Docs: https://docs.cyclic.com
+
+# Build configuration
+build:
+  # The build command
+  script: npm run build
+  # Output directory (for static frontend)
+  output: dist
+
+# Run configuration  
+run:
+  # The start command for the backend
+  command: cd backend && pip install -r requirements.txt && uvicorn app:app --host 0.0.0.0 --port $PORT
+
+# Port configuration
+configuration:
+  port: 3000
+
+# Environment variables (set in Cyclic dashboard)
+env:
+  # Add OPENAI_API_KEY in Cyclic dashboard
+  # CYCLIC will be set automatically
