@@ -16,11 +16,5 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Copy start script
-COPY start.sh .
-
-# Make it executable
-RUN chmod +x start.sh
-
-# Run the start script
-CMD ["./start.sh"]
+# Run uvicorn directly with fixed port
+CMD ["uvicorn", "backend.app:app", "--host", "0.0.0.0", "--port", "8000"]
