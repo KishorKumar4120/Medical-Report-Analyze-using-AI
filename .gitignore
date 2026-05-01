@@ -1,0 +1,39 @@
+# Python
+backend/env/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.agents/
+.cursor/
+.jetro/
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Uploads (user data)
+backend/uploads/
+uploads/
+
+# Environment files
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log

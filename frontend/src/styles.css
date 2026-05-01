@@ -1,0 +1,49 @@
+body {
+  font-family: Arial;
+  background: #f5f7fa;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.upload-box {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+tr.low {
+  background-color: #ffe5e5;
+}
+
+tr.high {
+  background-color: #fff3cd;
+}
+
+tr.normal {
+  background-color: #e6ffed;
+}
+
+.summary {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+}
