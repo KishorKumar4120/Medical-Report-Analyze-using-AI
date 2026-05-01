@@ -15,14 +15,14 @@ const getApiBaseUrl = () => {
 };
 
 const API = axios.create({
-  baseURL: getApiBaseUrl(),
+  baseURL: getApiBaseUrl()
 });
 
 export const analyzeReport = async (file) => {
   const formData = new FormData();
   formData.append("file", file);
 
-  const response = await API.post("/analyze-report", formData);
+  const response = await API.post("/api/analyze-report", formData);
 
   return response.data;
 };
