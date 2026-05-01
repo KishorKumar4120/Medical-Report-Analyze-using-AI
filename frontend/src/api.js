@@ -1,7 +1,17 @@
 import axios from "axios";
 
+// Determine the API base URL based on environment
+const getApiBaseUrl = () => {
+  // Use environment variable in production (Vercel)
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  // Default to localhost for development
+  return "http://127.0.0.1:8000";
+};
+
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000", // FastAPI backend
+  baseURL: getApiBaseUrl(),
 });
 
 export const analyzeReport = async (file) => {
